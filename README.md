@@ -1,5 +1,5 @@
 ## sqlx-spring-boot-starter
-基于p6sy、druid 封装的springboot mysql starter，包含日志打印开关等功能，简单易用。
+基于p6sy、druid 封装的springboot mysql starter，包含日志打印开关、事务支持等功能，零配置，简单易用。
 
 
 ## 快速上手开发
