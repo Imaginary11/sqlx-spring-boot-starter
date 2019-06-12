@@ -44,4 +44,9 @@
 
 ### 6.启动 Application测试
 
+### 7.demo 演示 目录结构
+![](https://github.com/Imaginary11/sqlx-spring-boot-starter/blob/master/sqlx.png)
+![](https://github.com/Imaginary11/sqlx-spring-boot-starter/blob/master/sqlx-app.png)
+![](https://github.com/Imaginary11/sqlx-spring-boot-starter/blob/master/sqlx-mybatis.png)
+![](https://github.com/Imaginary11/sqlx-spring-boot-starter/blob/master/test.png)
 
