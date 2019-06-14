@@ -50,3 +50,39 @@
 ![](https://github.com/Imaginary11/sqlx-spring-boot-starter/blob/master/sqlx-mybatis.png)
 ![](https://github.com/Imaginary11/sqlx-spring-boot-starter/blob/master/test.png)
 
+### 9. 相关配置
+
+mybatis-config.xml
+
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+        <configuration>
+            <settings>
+                <setting name="mapUnderscoreToCamelCase" value="false"/>
+                <setting name="cacheEnabled" value="true"/>
+                <setting name="lazyLoadingEnabled" value="false"/>
+                <setting name="defaultExecutorType" value="REUSE"/>
+                <setting name="defaultStatementTimeout" value="300"/>
+            </settings>
+        </configuration>        
+        
+ application.properties
+ 
+        sqlx.primary.enabled=true
+
+        sqlx.primary.mybatis.config-location = classpath:mybatis-config.xml
+        sqlx.primary.mybatis.mapper-locations = classpath:mapper/itsm_account/*.xml
+        sqlx.primary.mybatis.type-aliases-package = com.example.demostarter.model
+
+        sqlx.primary.db.type = com.alibaba.druid.pool.DruidDataSource
+        sqlx.primary.db.url = jdbc:p6spy:mysql://xxx:3306/itsm_account?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&socketTimeout=300000
+        sqlx.primary.db.driverClassName = com.p6spy.engine.spy.P6SpyDriver
+        sqlx.primary.db.username = xxx
+        sqlx.primary.db.password = xxx
+        sqlx.primary.db.druid-initial-size = 10
+        sqlx.primary.db.druid-max-active = 10
+        sqlx.primary.db.v-query = select 1 from dual
+
+        logging.level.p6spy = info
+ 
+
