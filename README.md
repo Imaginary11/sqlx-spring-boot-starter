@@ -1,5 +1,5 @@
 ## sqlx-spring-boot-starter
-基于p6sy、druid 封装的springboot mysql starter，包含日志打印开关、事务支持等功能，零配置，简单易用。
+基于p6sy、druid 封装的springboot mysql starter，包含多数据源支持、日志打印开关、事务支持等功能，零配置，简单易用。
 
 
 ## 快速上手开发
@@ -11,7 +11,7 @@
       <version>1.0.0-RELEASE</version>
     </dependency>
 
-### 2.在Springboot 配置文件中加入一下配置
+### 2.在Springboot 配置文件中加入一下配置（默认支持双数据源，sqlx.secondary.xxxxx，如需拓展，可以拉取源码修改，ps 建议一个服务使用一个数据源）
     # 启用开关
     sqlx.primary.enabled=true 
     # mybatis 配置文件位置
